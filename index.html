@@ -1,12 +1,35 @@
 <html>
   <head>
     <title>Carified</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+      }
+      .main {
+        grid-column: 5 / 7;
+      }
+      .search-form {
+        position: absolute;
+        top: 45%;
+        transform: translateY(-45%);
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <form action="#">
-      <legend>Get carified!</legend>
-      <input type="text" name="search" value="" placeholder="" disabled="disabled">
-      <input type="submit" value="Search" disabled="disabled">
-    </form>
+    <div class="container">
+      <header></header>
+      <div class="main">
+        <div class="search-form">
+          <form action="#">
+            <legend class="search-form__legend">Get carified!</legend>
+            <input class="search-form__text" type="text" name="search" value="" placeholder="" disabled="disabled">
+            <input class="search-form__button" type="submit" value="Search" disabled="disabled">
+          </form>
+        </div>
+      </div>
+      <footer></footer>
+    </div>
   </body>
 </html>
